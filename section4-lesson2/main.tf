@@ -1,4 +1,13 @@
 # Configure the Docker provider
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
 provider "docker" {}
 
 #Image to be used by container
